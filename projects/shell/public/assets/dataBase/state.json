@@ -1,0 +1,28 @@
+{"state":
+ [
+    {
+        "id": 1,
+        "stateName": "TAMIL NADU",
+        "countryId": 3,
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "stateName": "HARYANA",
+        "countryId": 3,
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "stateName": "PUNJAB",
+        "countryId": 3,
+        "status": "Active"
+    },
+    {
+        "id": 4,
+        "stateName": "RAJASTHAN",
+        "countryId": 3,
+        "status": "Active"
+    }
+]
+}

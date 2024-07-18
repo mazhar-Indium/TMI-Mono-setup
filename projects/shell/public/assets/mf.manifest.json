@@ -1,0 +1,8 @@
+{
+
+  "layout": "http://localhost:4000/remoteEntry.js",
+  "acl": "http://localhost:4100/remoteEntry.js",
+  "onboarding": "http://localhost:4200/remoteEntry.js",
+  "master": "http://localhost:4300/remoteEntry.js"
+
+}

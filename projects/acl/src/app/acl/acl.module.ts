@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
         path: 'acl', component:AclComponent
       }
     ])
-  ]
+  ],
+  exports: [AclComponent]
 })
 export class AclModule { }

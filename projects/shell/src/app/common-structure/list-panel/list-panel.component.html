@@ -1,0 +1,78 @@
+<mat-expansion-panel hideToggle disabled class="table-panel">
+    <mat-expansion-panel-header class="searchBar">
+      <mat-panel-title id="master-panel-title">
+        <div class="title-text">{{ listName }}</div>
+      </mat-panel-title>
+      <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+        <!----SEARCH FEILD-->
+        <div fxFlex="67">
+          <mat-form-field class="master-search-form-field" appearance="outline">
+            <input
+              matTooltip="{{ 'Search Here' }}"
+              matInput
+              type="text"
+              (keyup)="applyFilter($event)"
+              (keydown)="$event.stopPropagation()"
+              placeholder="{{ 'Search' }}"
+              class="master-searchBar-position"
+            />
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+        </div>
+        <!------->
+  
+        <!----DOWNLOAD SECTION-->
+        <div fxFlex="67" fxLayoutAlign="center">
+          <button
+            matTooltip="{{ 'Download' }}"
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu"
+            class="master-table-option-button"
+            color="purple"
+            mat-button
+          >
+            <mat-icon class="downloadicon">file_download</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="downloadPDF()">
+              <mat-icon>picture_as_pdf</mat-icon>
+              <span>{{ "Download PDF" }}</span>
+            </button>
+            <mat-divider></mat-divider>
+  
+            <button mat-menu-item (click)="exportToExcel()">
+              <mat-icon>table_chart</mat-icon>
+              <span>{{ "Download EXCEL" }}</span>
+            </button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="exportToCSV()">
+              <mat-icon>subject</mat-icon>
+              <span>{{ "Download CSV" }}</span>
+            </button>
+          </mat-menu>
+        </div>
+  
+        <!---COLUMN FILTER MENU---------->
+        <div fxFlex="67" fxLayoutAlign="center">
+          <button
+            class="master-table-option-button"
+            matTooltip="{{ 'Column Filter' }}"
+            color="white"
+            [matMenuTriggerFor]="opt"
+            aria-label="Example icon-button with a menu"
+            mat-button
+          >
+            <mat-icon class="selctoricon">filter_list</mat-icon>
+          </button>
+          <mat-menu #opt="matMenu">
+            <div *ngFor="let options of filterOptions">
+              <mat-checkbox class="mat-menu-item" [(ngModel)]="options.checked" [checked]="options.checked"
+                (change)="columnFilter()">{{ options.name }}</mat-checkbox>
+              <mat-divider></mat-divider>
+            </div>
+          </mat-menu>
+        </div>
+      </div>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+  

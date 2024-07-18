@@ -1,0 +1,19 @@
+{"country":
+ [
+    {
+        "id": 1,
+        "countryName": "USA",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "countryName": "IN",
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "countryName": "INDIA",
+        "status": "Active"
+    }
+]
+}

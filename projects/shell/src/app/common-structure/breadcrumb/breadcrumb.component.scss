@@ -1,0 +1,44 @@
+// Styles for breadcrumb
+ul.breadcrumb {
+    padding: 10px 1px;
+    list-style: none;
+  }
+  
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "→\00a0";
+  }
+  
+  ul.breadcrumb li a {
+    font: normal normal normal 14px/17px BentonSans Regular;
+    letter-spacing: 0.1px;
+    opacity: 1;
+    color: purple;
+    text-decoration: none;
+  }
+  
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-icon {
+    top: 4px;
+    font-size: 25px !important;
+    position: relative;
+    color: #90246d;
+    opacity: 1;
+  }
+  
+  .active {
+    color: black !important;
+    color: #383838;
+    font: normal normal normal 14px/17px BentonSans Regular;
+  }
+  

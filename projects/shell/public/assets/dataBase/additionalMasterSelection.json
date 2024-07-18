@@ -1,0 +1,44 @@
+{
+    "addionalMasterList": [
+        {
+            "id": 1,
+            "name": "Additional 1"
+        },
+        {
+            "id": 2,
+            "name": "Additional 2"
+        },
+        {
+            "id": 3,
+            "name": "Additional 3"
+        },
+        {
+            "id": 4,
+            "name": "Additional 4"
+        },
+        {
+            "id": 5,
+            "name": "Additional 5"
+        },
+        {
+            "id": 6,
+            "name": "Additional 6"
+        },
+        {
+            "id": 7,
+            "name": "Additional 7"
+        },
+        {
+            "id": 8,
+            "name": "Additional 8"
+        },
+        {
+            "id": 9,
+            "name": "Additional 9"
+        },
+        {
+            "id": 10,
+            "name": "Additional 10"
+        }
+    ]
+}

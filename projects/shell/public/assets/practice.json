@@ -1,0 +1,319 @@
+
+{
+    "data":[
+        {
+            "id":1,
+            "name":"ganesh",
+            "Department":"Front End"
+        },
+        {
+            "id":2,
+            "name":"rhythm",
+            "Department":"Front End"
+        },
+        {
+            "id":3,
+            "name":"elakiya",
+            "Department":"Front End"
+        },
+        {
+            "id":4,
+            "name":"Madhan",
+            "Department":"Back End"
+        },
+        {
+            "id":5,
+            "name":"Vamsi",
+            "Department":"Back End"
+        }
+    ],
+
+    "Approvals":[
+
+        {
+            "Type":"Company Info",
+            "Company":"Jio",
+            "Status":"Pending"
+        },
+        {
+            "Type":"Company Info",
+            "Company":"Jio",
+            "Status":"New"
+        },
+        {
+            "Type":"Company Info",
+            "Company":"Jio",
+            "Status":"Approved"
+        },
+        {
+            "Type":"Company Info",
+            "Company":"Jio",
+            "Status":"Pending"
+        },
+        {
+            "Type":"Company Info",
+            "Company":"Jio",
+            "Status":"Pending"
+        },
+        {
+            "Type":"Company Info",
+            "Company":"Jio",
+            "Status":"Pending"
+        }
+    ],
+
+    "Management_report":[
+        {
+            "Company_Name":"Company 1",
+            "Storage_Allocation":"12TB",
+            "Storage_consumption":"12TB",
+            "User_group":6,
+            "User_count":60,
+            "Per_user_Storage_Allocation":"200GB",
+            "User_Average_Consumption":"100GB"
+        },
+        {
+            "Company_Name":"Company 2",
+            "Storage_Allocation":"12TB",
+            "Storage_consumption":"12TB",
+            "User_group":6,
+            "User_count":60,
+            "Per_user_Storage_Allocation":"200GB",
+            "User_Average_Consumption":"100GB"
+        },
+        {
+            "Company_Name":"Company 3",
+            "Storage_Allocation":"12TB",
+            "Storage_consumption":"12TB",
+            "User_group":6,
+            "User_count":60,
+            "Per_user_Storage_Allocation":"200GB",
+            "User_Average_Consumption":"100GB"
+        },
+        {
+            "Company_Name":"Company 4",
+            "Storage_Allocation":"6TB",
+            "Storage_consumption":"5TB",
+            "User_group":2,
+            "User_count":10,
+            "Per_user_Storage_Allocation":"20GB",
+            "User_Average_Consumption":"10GB"
+        },
+        {
+            "Company_Name":"Company 5",
+            "Storage_Allocation":"14TB",
+            "Storage_consumption":"12TB",
+            "User_group":5,
+            "User_count":50,
+            "Per_user_Storage_Allocation":"200GB",
+            "User_Average_Consumption":"100GB"
+        },
+        {
+            "Company_Name":"Company 6",
+            "Storage_Allocation":"10TB",
+            "Storage_consumption":"8TB",
+            "User_group":3,
+            "User_count":40,
+            "Per_user_Storage_Allocation":"200GB",
+            "User_Average_Consumption":"100GB"
+        }
+    ],
+    "Holidays":[
+        {
+            "date":"2022-03-02",
+            "Holiday":"Happy1"
+        },
+        {
+            "date":"2022-02-02",
+            "Holiday":"Pongal"
+        },
+        {
+            "date":"2022-02-02",
+            "Holiday":"Pongal"
+
+        },
+        {
+            "date":"2022-02-03",
+            "Holiday":"Pongal"
+        }
+        ,{
+            "date":"2022-03-03",
+            "Holiday":"Happy"
+        },
+        {
+            "date":"2022-02-01",
+            "Holiday":"Pongal"
+        }
+        ,{
+            "date":"2022-03-02",
+            "Holiday":"Happy1"
+        },
+        {
+            "date":"2022-03-03",
+            "Holiday":"Happy1"
+        },
+        {
+            "date":"2022-03-02",
+            "Holiday":"Happy1"
+        },
+        {
+            "date":"2022-03-03",
+            "Holiday":"Happy1"
+        }
+    
+    ],
+    "modules": [
+        {
+            "Id": "1",
+            "Module_Name": "OnBoarding",
+            "Version": [
+                "OnBoarding WorkFlow 1",
+                "OnBoarding WorkFlow 2",
+                "OnBoarding WorkFlow 3",
+                "OnBoarding WorkFlow 4",
+                "OnBoarding WorkFlow 5",
+                "OnBoarding WorkFlow 6"
+            ],
+            "selected":null,
+            "checked": true
+        },
+        {
+            "Id": "2",
+            "Module_Name": "Recruitment",
+            "Version": [
+                
+            ],
+            "selected":null,
+            "checked": false
+        },
+        {
+            "Id": "3",
+            "Module_Name": "Appraisal",
+            "Version": [
+                "Appraisal WorkFlow 1",
+                "Appraisal WorkFlow 2",
+                "Appraisal WorkFlow 3"
+            ],
+            "selected":null,
+            "checked": true
+        },
+        {
+            "Id": "4",
+            "Module_Name": "Training",
+            "Version": [
+                "Training WorkFlow 1",
+                "Training WorkFlow 2"
+            ],
+            "selected":"Training WorkFlow 1",
+
+            "checked": true
+        }
+    ],
+    "modulesSelected": [
+        {
+            "Id": "1",
+            "Module_Name": "OnBoarding",
+            "Version": "OnBoarding WorkFlow 1",
+            "checked": true
+        },
+        {
+            "Id": "2",
+            "Module_Name": "Recruitment",
+            "Version":null,
+            "checked": false
+        },
+        {
+            "Id": "3",
+            "Module_Name": "Appraisal",
+            "Version":null,
+            "checked": false
+        },
+        {
+            "Id": "4",
+            "Module_Name": "Training",
+            "Version":"Training WorkFlow 1",
+            "checked": true
+        }
+    ],
+    "Masters":[
+        {
+            "Id":1,
+            "Masters_Name":"Country Master",
+            "Type":"Common Master",
+            "Hierachy_enabled":true,
+            "Parent":true,
+            "Description":"",
+            "child_id":2
+        },
+        {
+            "Id":2,
+            "Masters_Name":"State Master",
+            "Type":"Common Master",
+            "Hierachy_enabled":true,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        },
+        {
+            "Id":3,
+            "Masters_Name":"City Master",
+            "Type":"Default Master",
+            "Hierachy_enabled":false,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        },
+        {
+            "Id":4,
+            "Masters_Name":"Location Master",
+            "Type":"Default Master",
+            "Hierachy_enabled":false,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        },
+        {
+            "Id":5,
+            "Masters_Name":"Grade Master",
+            "Type":"Default Master",
+            "Hierachy_enabled":false,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        },
+        {
+            "Id":6,
+            "Masters_Name":"Designation Master",
+            "Type":"Default Master",
+            "Hierachy_enabled":false,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        },
+        {
+            "Id":7,
+            "Masters_Name":"Department Master",
+            "Type":"Default Master",
+            "Hierachy_enabled":false,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        },
+        {
+            "Id":8,
+            "Masters_Name":"Sub-Department Master",
+            "Type":"Default Master",
+            "Hierachy_enabled":false,
+            "Parent":false,
+            "Description":"",
+            "child_id":0
+        }
+        
+    ]
+  
+
+
+
+}
+
+

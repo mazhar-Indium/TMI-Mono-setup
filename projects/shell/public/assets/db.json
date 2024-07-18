@@ -1,0 +1,34 @@
+
+[
+    {  
+    "requestId": 1,  
+    "location": "Chennai",  
+    "rcsGrade": "A",
+    "dsignation": "DataBase Developer",
+    "noOfPosition": "2",
+    "noOfVacancy": "1" 
+
+}, {  
+    "requestId": 2,  
+    "location": "Banglore",  
+    "rcsGrade": "B",
+    "dsignation": "FullStack Developer",
+    "noOfPosition": "4",
+    "noOfVacancy": "3"
+}, {  
+    "requestId": 3,  
+    "location": "Hydrabad",  
+    "rcsGrade": "c",
+    "dsignation": "MeanStack Developer",
+    "noOfPosition": "3",
+    "noOfVacancy": "1"
+}, {  
+    "requestId": 4,  
+    "location": "Mumbai",  
+    "rcsGrade": "A",
+    "dsignation": "DataBase Developer",
+    "noOfPosition": "7",
+    "noOfVacancy": "5"
+}
+    ]
+  

@@ -1,0 +1,11 @@
+<div class="breadcrumb-container">
+    <ul class="breadcrumb">
+      <li>
+        <mat-icon class="breadcrumb-icon">{{ list[0] }}</mat-icon>
+      </li>
+      <li *ngFor="let bl of list | slice: 1; let last = last">
+        <a [ngClass]="{ active: last }">{{ bl}}</a>
+      </li>
+    </ul>
+  </div>
+  

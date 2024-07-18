@@ -1,0 +1,22 @@
+.toast-msg {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  ::ng-deep .success-msg-cls.mat-snack-bar-container {
+    background: green;
+  }
+  
+  ::ng-deep .error-msg-cls.mat-snack-bar-container {
+    background: red;
+  }
+  
+  ::ng-deep .info-msg-cls.mat-snack-bar-container {
+    background: #add8e6;
+  }
+  
+  ::ng-deep .warning-msg-cls.mat-snack-bar-container {
+    background: #ffbf00;
+  }
+  

@@ -1,0 +1,88 @@
+.top-level-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background-image: url("../assets/login-background.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    
+    .login-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .login-box {
+      background: #ffffff;
+      box-shadow: 20px 20px 20px #0000001a;
+      border-radius: 8px;
+      padding: 20px;
+      width: 90%;
+      max-width: 25%;
+    }
+  
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .login-text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .login-fields {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .login-error {
+      color: red;
+      font-size: 10px;
+    }
+  
+    .signIn-btn {
+      margin-top: 0;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+  
+    .login-text {
+      font-weight: 600;
+      color: #000000;
+    }
+  
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 16px;
+      line-height: 18px;
+      color: #2e2e2e;
+    }
+  
+    .forgot-password {
+      margin-top: -10px !important;
+      margin-bottom: 10px !important;
+      color: #673091 !important;
+      font-weight: 400 !important;
+      float: right !important;
+      font-size: 12px;
+    }
+  
+    .ok-btn {
+      padding: 5px 0;
+      text-transform: uppercase;
+      width: 150px;
+      margin-left: 80px;
+      margin-bottom: 20px;
+    }
+  }
+  

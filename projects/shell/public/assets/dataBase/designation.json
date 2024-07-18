@@ -1,0 +1,40 @@
+{"designation":
+  [
+     {
+         "id": 1,
+         "designationName": "Project Manager",
+         "designationShortName": "PM",
+         "rcsGrade": "F",
+         "rcsGradeId": 1,
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     },
+     {
+         "id": 2,
+         "designationName": "Team Leader",
+         "designationShortName": "TL",
+         "rcsGrade": "N",
+         "rcsGradeId": 2,
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     },
+     {
+         "id": 3,
+         "designationName": "Backend Developer",
+         "designationShortName": "SDE",
+         "rcsGrade": "O",
+         "rcsGradeId": 3,
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     },
+     {
+         "id": 4,
+         "designationName": "Frontend Developer",
+         "designationShortName": "SDE",
+         "rcsGrade": "H",
+         "rcsGradeId": 4,
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     }
+ ]
+ }

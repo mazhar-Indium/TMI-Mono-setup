@@ -1,0 +1,19 @@
+{
+    "branchMaster":[
+        {
+            "id": 1,
+            "branchName": "Bangluru",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "branchName": "Hydrabad",
+            "status": "Active"
+        },
+        {
+            "id": 3,
+            "branchName": "Chennai",
+            "status": "Active"
+        }
+    ]
+}

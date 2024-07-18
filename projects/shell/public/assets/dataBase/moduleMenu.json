@@ -1,0 +1,107 @@
+{"masters":
+ [
+    {
+        "ModuleName": "Masters",
+        "SubModule": [
+            {
+            "SubModuleName": "Common Masters",
+            "Screens":[
+                {
+                "ScreenName": "Country Master",
+                "routelink": "/master/common-masters/country-master"
+            },
+            {
+                "ScreenName": "State Master",
+                "routelink":"/master/common-masters/state-master"
+            }
+        ]
+
+        },{
+            "SubModuleName": "Default Masters",
+            "Screens":[
+                {
+                "ScreenName": "City Master",
+                "routelink":"/master/default-masters/city-master"
+            },
+            {
+                "ScreenName": "Category Master",
+                "routelink":"/master/default-masters/category-master"
+            },
+
+            {
+                "ScreenName": "Location Master",
+                "routelink":"/master/default-masters/location-master"
+            },
+            {
+                "ScreenName": "Division Master",
+                "routelink":"/master/default-masters/division-master"
+            },
+            {
+                "ScreenName": "Designation Master",
+                "routelink":"/master/default-masters/designation-master"
+            },
+            {
+                "ScreenName": "Department Master",
+                "routelink":"/master/default-masters/department-master"
+            },
+            {
+                "ScreenName": "Sub Department Master",
+                "routelink":"/master/default-masters/sub-department-master"
+            },
+            {
+                "ScreenName": "Employee Status Master",
+                "routelink":"/master/default-masters/employee-status-master"
+            },
+            {
+                "ScreenName": "Grade Master",
+                "routelink":"/master/default-masters/grade-master"
+            },
+            {
+                "ScreenName": "Cost Center Master",
+                "routelink":"/master/default-masters/cost-center-master"
+            },
+            {
+                "ScreenName": "Branch Master",
+                "routelink":"/master/default-masters/branch-master"
+            },
+            {
+                "ScreenName": "Bank Master",
+                "routelink":"/master/default-masters/bank-master"
+            },
+            {
+                "ScreenName": "Maritial Master",
+                "routelink":"/master/default-masters/maritial-master"
+            },
+            {
+                "ScreenName": "Gender Master",
+                "routelink":"/master/default-masters/gender-master"
+            }
+        ]
+        },
+        {
+            "SubModuleName": "Additional Master",
+            "Screens":[],
+            "routelink":"/master/additional-master"
+        },
+        {
+            "SubModuleName": "Salary Masters",
+            "Screens":[],
+            "routelink":"/master/salary-master"
+        },
+        {
+            "SubModuleName": "Employee Master",
+            "Screens":[],
+            "routelink":"/master/employee-master"
+        },
+        {
+            "SubModuleName": "Group Allocation",
+            "Screens":[],
+            "routelink":"/master/group-allocation"
+        }
+        
+    ]
+}
+ ]
+}
+       
+   

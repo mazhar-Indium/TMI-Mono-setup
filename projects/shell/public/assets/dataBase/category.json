@@ -1,0 +1,11 @@
+{
+    "categoryMaster":[
+        {
+            "EmpCategoryName": "PERMANENT",
+            "Tenure": "FIXED",
+            "FromDate": "04-Jan-2010",
+            "ToDate": "31-Dec-2100",
+            "Status": "Active"
+        }
+    ]
+}

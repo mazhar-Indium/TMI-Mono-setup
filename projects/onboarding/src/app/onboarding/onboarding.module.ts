@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([{
       path:"onboarding", component:OnboardingComponent
     }])
-  ]
+  ],
+  exports:[OnboardingComponent]
 })
 export class OnboardingModule { }

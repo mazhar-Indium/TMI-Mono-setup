@@ -1,0 +1,38 @@
+{
+    "additionalMaster": [
+        {
+            "id": 1,
+            "name":"RCS Grade Master",
+            "code":"R001",
+            "description": "RCS Master",
+            "master_id": 2,
+            "parentId": 10
+            
+        },
+        {
+            "id": 2,
+            "name":"RCS Cost Master",
+            "code":"R002",
+            "description": "RCS Filtters",
+            "master_id": 1,
+            "parentId": 10
+        },
+        {
+            "id": 3,
+            "name":"RCS Gender Master",
+            "code":"R003",
+            "description": "RCS Master",
+            "master_id": 1,
+            "parentId": 10
+        },
+        {
+            "id": 4,
+            "name":"RCS Category Master",
+            "code":"R004",
+            "description": "RCS Filtters",
+            "master_id": 2,
+            "parentId": 10
+        }
+    ]
+
+}

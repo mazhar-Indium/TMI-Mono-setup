@@ -1,1 +1,100 @@
-<p>login works!</p>
+<div class="top-level-container">
+    <div class="login-container">
+      <mat-card class="login-box">
+        <div>
+          <div class="logo-container">
+            <img src="../assets\logo.png" alt="elixirHR" width="100px" height="70px" />
+          </div>
+          <br />
+          <div class="login-text-container">
+            <span *ngIf="step === 1" class="login-text">{{ "Login to proceed" }}</span>
+            <span *ngIf="step === 2" class="login-text">{{ "Reset Password?" }}</span>
+          </div>
+          <br />
+        </div>
+        <form *ngIf="step === 1" [formGroup]="loginForm" novalidate>
+          <div class="login-error" [hidden]="!error || isLoading">
+            {{ "email or password incorrect!" }}
+          </div>
+          <br />
+          <div class="login-fields">
+            <mat-label>{{ "Email" }}<span class="mandatory-mark">*</span></mat-label>
+            <mat-form-field [hideRequiredMarker]="true" appearance="outline" class="login-form-field">
+              <input
+                type="text"
+                matInput
+                formControlName="email"
+                autocomplete="email"
+                [placeholder]="'Email'"
+                (keydown.enter)="keydown($event)"
+                required
+              />
+              <mat-error *ngIf="hasError('email', 'required')">{{ "Email is Required!" }}</mat-error>
+              <mat-error *ngIf="hasError('email', 'email')">{{ "Email must be a valid email address" }}</mat-error>
+            </mat-form-field>
+  
+            <mat-label>{{ "Password" }}<span class="mandatory-mark">*</span></mat-label>
+            <mat-form-field [hideRequiredMarker]="true" appearance="outline" class="login-form-field">
+              <input
+                [type]="hide ? 'password' : 'text'"
+                matInput
+                formControlName="password"
+                autocomplete="current-password"
+                [placeholder]="'Password'"
+                (keydown.enter)="keydown($event)"
+                required
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+                type="button"
+              >
+                <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+              </button>
+              <mat-error *ngIf="hasError('password', 'required')">{{ "Password is Required!" }}</mat-error>
+              <mat-error *ngIf="hasError('password', 'minlength')">{{ "Password should contain at least 1 character" }}</mat-error>
+              <mat-error *ngIf="hasError('password', 'maxlength')">{{ "Password should contain at most 25 characters" }}</mat-error>
+            </mat-form-field>
+  
+            <mat-label>{{ "Company Code" }}<span class="mandatory-mark">*</span></mat-label>
+            <mat-form-field [hideRequiredMarker]="true" appearance="outline" class="login-form-field">
+              <input
+                type="text"
+                matInput
+                formControlName="organization"
+                autocomplete="current-password"
+                [placeholder]="'Company Code'"
+                (keydown.enter)="keydown($event)"
+                required
+              />
+              <mat-error *ngIf="hasError('organization', 'required')">{{ "Company Code is Required!" }}</mat-error>
+              <mat-error *ngIf="hasError('organization', 'minlength')">{{ "Company Code should contain at least 1 character" }}</mat-error>
+              <mat-error *ngIf="hasError('organization', 'maxlength')">{{ "Company Code should contain at most 25 characters" }}</mat-error>
+            </mat-form-field>
+            <div>
+              <button mat-button class="forgot-password" (click)="resetPassword()" (keydown.enter)="$event.preventDefault()">
+                {{ "Reset/Forgot Password?" }}
+              </button>
+            </div>
+            <br />
+            <button mat-raised-button color="primary" class="signIn-btn" type="submit" (click)="login()" [disabled]="!loginForm.valid">
+              <span>{{ "Sign In" }}</span>
+            </button>
+          </div>
+        </form>
+        <div *ngIf="step === 2">
+          <p>Password Reset Link will be Sent to your Mail. Please Check your Inbox and reset your password.</p>
+          <button mat-raised-button color="primary" class="ok-btn" type="submit" (click)="linkSent()">
+            <span>{{ "OK" }}</span>
+          </button>
+        </div>
+      </mat-card>
+    </div>
+    <div class="footer">
+      <span>{{ "© 2018 - 2022. All rights reserved." }}</span>
+    </div>
+  </div>
+  

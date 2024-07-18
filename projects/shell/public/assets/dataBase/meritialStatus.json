@@ -1,0 +1,19 @@
+{
+    "meritialStatus":[
+        {
+            "id": 1,
+            "meritialStat": "Single",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "meritialStat": "Married",
+            "status": "Active"
+        },
+        {
+            "id": 3,
+            "meritialStat": "Seprated",
+            "status": "Active"
+        }
+    ]
+}

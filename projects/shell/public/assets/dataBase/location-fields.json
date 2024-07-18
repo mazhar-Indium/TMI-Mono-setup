@@ -1,0 +1,61 @@
+"masterConfiguration": {
+ "DisplayName" : "Location Master",
+ "DisplayCoulmns":[
+   {
+     FieldName: "LocationName",
+     DisplayName: "Branch Name",
+     isDisplay: true,
+     isRequired: true
+   },
+   {
+    FieldName: "ShortName",
+    DisplayName: "Short Name",
+    isDisplay: true
+    isRequired: true
+   },
+   {
+    FieldName: "CountryId",
+    DisplayName: "Country",
+    isDisplay: false
+    isRequired: false
+   },
+   {
+    FieldName: "CountryName",
+    DisplayName: "Country",
+    isDisplay: true,
+    isRequired: true
+   },
+   {
+    FieldName: "StateId",
+    DisplayName: "State Id",
+    isDisplay: false,
+    isRequired: false
+   },
+   {
+    FieldName: "StateName",
+    DisplayName: "State",
+    isDisplay: true,
+    isRequired: true
+   },
+   {
+    FieldName: "CityId",
+    DisplayName: "City Id",
+    isDisplay: false,
+    isRequired: false
+   },
+   {
+    FieldName: "CityName",
+    DisplayName: "City",
+    isDisplay: true,
+    isRequired: true
+   },
+   {
+    FieldName: "StatusName",
+    DisplayName: "Status",
+    isDisplay: true,
+    isRequired: false
+   }
+ ]
+}
+
+// api/designationmaster

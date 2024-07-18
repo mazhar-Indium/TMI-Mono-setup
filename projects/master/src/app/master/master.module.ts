@@ -10,6 +10,7 @@ import { MasterComponent } from './master.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [MasterComponent]
 })
 export class MasterModule { }

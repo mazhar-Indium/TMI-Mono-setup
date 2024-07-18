@@ -1,0 +1,40 @@
+{"grade":
+  [
+     {
+         "id": 1,
+         "rcsGradeName": "F",
+         "rcsGradeShortName": "FFF",
+         "locationName": "CHENNAI",
+         "status": "Active",
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     },
+     {
+         "id": 2,
+         "rcsGradeName": "H",
+         "rcsGradeShortName": "HHH",
+         "locationName": "CHENNAI",
+         "status": "Active",
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     },
+     {
+         "id": 3,
+         "rcsGradeName": "O",
+         "rcsGradeShortName": "OOO",
+         "locationName": "CHENNAI",
+         "status": "Active",
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     },
+     {
+         "id": 4,
+         "rcsGradeName": "N",
+         "rcsGradeShortName": "NNN",
+         "locationName": "CHENNAI",
+         "status": "Active",
+         "fromDate": "01-Apr-2010",
+         "toDate": "31-Dec-2100"
+     }
+ ]
+ }

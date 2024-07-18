@@ -1,0 +1,24 @@
+{"division":
+ [
+    {
+        "id": 1,
+        "division": "Gaming",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "division": "Digital",
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "division": "Business",
+        "status": "Inactive"
+    },
+    {
+        "id": 4,
+        "division": "Testers",
+        "status": "Active"
+    }
+]
+}

@@ -1,0 +1,34 @@
+{
+    "costCenterMaster":[
+        {
+            "costCenterName": "K033402070",
+            "fromDate": "04-Jan-2010",
+            "toDate": "31-Dec-2100",
+            "status": "Active"
+        },
+        {
+            "costCenterName": "K037103070",
+            "fromDate": "04-Jan-2010",
+            "toDate": "31-Dec-2100",
+            "status": "Active"
+        },
+        {
+            "costCenterName": "K031200170",
+            "fromDate": "04-Jan-2010",
+            "toDate": "31-Dec-2100",
+            "status": "Active"
+        },
+        {
+            "costCenterName": "K045906070",
+            "fromDate": "04-Jan-2010",
+            "toDate": "31-Dec-2100",
+            "status": "Active"
+        },
+        {
+            "costCenterName": "K033100070",
+            "fromDate": "04-Jan-2010",
+            "toDate": "31-Dec-2100",
+            "status": "Active"
+        }
+    ]
+}

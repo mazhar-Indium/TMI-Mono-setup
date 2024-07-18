@@ -1,0 +1,22 @@
+{
+    "subDepartment":[
+        {
+            "id": 1,
+            "departmentId": 1,
+            "subDepartment": "IT Service",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "departmentId": 2,
+            "subDepartment": "HR Support",
+            "status": "Inactive"
+        },
+        {
+            "id": 3,
+            "departmentId": 3,
+            "subDepartment": "Development",
+            "status": "Active"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+<div class="containerDC">
+    <h1 class="headerDC">Confirmation</h1>
+    <p class="paraDC">{{ "Are you sure you want to " + data.action + " ?" }}</p>
+    <div class="btngp">
+      <button
+        class="endbtndc"
+        mat-stroked-button
+        color="primary"
+        [mat-dialog-close]="false"
+      >
+        Cancel
+      </button>
+      <button
+        class="endbtndc"
+        mat-raised-button
+        color="primary"
+        [mat-dialog-close]="true"
+      >
+        Ok
+      </button>
+    </div>
+  </div>
+  

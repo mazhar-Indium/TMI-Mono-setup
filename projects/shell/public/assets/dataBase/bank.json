@@ -1,0 +1,19 @@
+{
+    "bankMaster":[
+        {
+            "id": 1,
+            "bankName": "ICIC",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "bankName": "HDFC",
+            "status": "Active"
+        },
+        {
+            "id": 3,
+            "bankName": "Axis",
+            "status": "Active"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "department":[
+        {
+            "id": 1,
+            "department": "Digital Engineering",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "department": "HR",
+            "status": "Inactive"
+        },
+        {
+            "id": 3,
+            "department": "Testing",
+            "status": "Active"
+        }
+    ]
+    
+}

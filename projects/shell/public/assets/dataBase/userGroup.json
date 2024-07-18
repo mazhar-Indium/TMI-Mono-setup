@@ -1,0 +1,25 @@
+{
+    "userGroup": [
+        {
+            "employeeCode": "13623",
+            "firstName": "Jack",
+            "lastName": "Jones",
+            "email": "Jackjones@gmail.com ",
+            "userGroup": "Employee"
+        },
+        {
+            "employeeCode": "14121",
+            "firstName": "Jack",
+            "lastName": "Jill",
+            "email": "Jackjill@gmail.com ",
+            "userGroup": "Employee"
+        },
+        {
+            "employeeCode": "10101",
+            "firstName": "Harry",
+            "lastName": "James",
+            "email": "Harryjaes@gmail.com ",
+            "userGroup": "Employee"
+        }
+    ]
+}

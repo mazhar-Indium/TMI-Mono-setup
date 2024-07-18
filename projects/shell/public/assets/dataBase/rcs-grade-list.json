@@ -1,0 +1,24 @@
+{"rscGradeList":
+  [
+     {
+         "id": 1,
+         "name": "F",
+         "status": "Active"
+     },
+     {
+         "id": 2,
+         "name": "N",
+         "status": "Active"
+     },
+     {
+         "id": 3,
+         "name": "O",
+         "status": "Active"
+     },
+     {
+         "id": 4,
+         "name": "H",
+         "status": "Active"
+     }
+ ]
+ }

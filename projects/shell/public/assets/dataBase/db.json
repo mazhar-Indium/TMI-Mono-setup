@@ -1,0 +1,26 @@
+[
+    {
+        "location": "Bangalore",
+        "rcsGrade": "i",
+        "designation": "Reporting Manager",
+        "onRoll": "3",
+        "asPositionRequired": "7",
+        "action": "Request Pending"
+    },
+    {
+        "location": "Mangalore",
+        "rcsGrade": "j",
+        "designation": "Manager",
+        "onRoll": "1",
+        "asPositionRequired": "4",
+        "action": "Request Pending"
+    },
+    {
+        "location": "Mumbai",
+        "rcsGrade": "k",
+        "designation": "HR Consultant",
+        "onRoll": "13",
+        "asPositionRequired": "17",
+        "action": "Request Completed"
+    }
+]

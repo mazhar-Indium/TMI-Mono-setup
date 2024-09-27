@@ -1,98 +1,99 @@
 <div *ngIf="loaderService.isLoading | async" class="loader-container">
-    <mat-spinner class="centered-spinner"></mat-spinner>
-  </div>
-  <div class="flex-fill">
-    <mat-sidenav-container class="flex-fill">
-      <mat-sidenav
-        #sidenav
-        [mode]="isMobile ? 'over' : 'side'"
-        [opened]="!isMobile"
-        [disableClose]="!isMobile"
-        [ngClass]="{'has-border': !isMobile}"
-        class="layout-sidenav"
-      >
-        <mat-toolbar class="layout-toolbar mat-elevation-z1">
-          <div class="flex-row center-align gap-1-5rem" *ngIf="!isCompanyAdmin && !isClientAdmin">
-            <img
-              src="../assets/logo.png"
-              width="60px"
-              height="40px"
-              style="cursor: pointer"
-              (click)="routeToDashboard()"
-            />
-          </div>
-          <div class="flex-row center-align gap-1-5rem" *ngIf="isCompanyAdmin || isClientAdmin">
-            <button class="logoButton" mat-raised-button *ngIf="!companyLogo" (click)="openDialogForUploadImage()">
-              Logo
-            </button>
-            <img
-              [src]="companyLogo"
-              *ngIf="companyLogo"
-              (click)="openDialogForUploadImage()"
-              width="60px"
-              height="40px"
-              style="cursor: pointer"
-            />
-          </div>
-        </mat-toolbar>
-        <nav>
-          <br />
-          <mat-card class="profile-card">
-            <div class="flex-row gap-10px">
-                <img [src]="profilepicbase64" class="profile-image flex-20" *ngIf="profilepicbase64" (click)="openuploadprofilepic()" />
-                <img src="assets/pp.jpg" alt="pp img" class="profile-image flex-20" *ngIf="!profilepicbase64" (click)="openuploadprofilepic()" />
-                <div class="flex-70">
-                  <mat-card-title id="userName">{{ username }}</mat-card-title>
-                  <mat-card-subtitle class="user-roles" *ngIf="userRole !== 'Super Admin'">{{ userRoleString }}</mat-card-subtitle>
-                </div>
-                <img src="assets/settings.svg" alt="settings" class="settings-menu flex-10" (click)="openSettings(collapsed)" />
-              </div>
-
-            <br *ngIf="!collapsed" />
-            <mat-divider *ngIf="!collapsed"></mat-divider>
-            <mat-card-content *ngIf="!collapsed" class="profile-menu-content">
-              <!-- Default Menues -->
-              <button mat-menu-item class="profile-menu-label" routerLink="/home">
-                <mat-icon>home</mat-icon>
-                Home
-              </button>
-              <button mat-menu-item class="profile-menu-label" routerLink="/my-profile">
-                <mat-icon>perm_identity</mat-icon>
-                My Profile
-              </button>
-              <button mat-menu-item class="profile-menu-label" routerLink="/change-password">
-                <mat-icon>key</mat-icon>
-                Change Password
-              </button>
-              <button mat-menu-item class="profile-menu-label" (click)="logOut()">
-                <mat-icon>logout</mat-icon>
-                Logout
-              </button>
-              <mat-menu #myAccount="matMenu" xPosition="after" class="profile-menus">
-                <div *ngFor="let acl of aclList">
-                  <button mat-menu-item [routerLink]="acl.screenURL">
-                    {{ (acl.ScreenName === 'Screen-role mapping' ? 'User Rights' : acl.screenName) | titlecase }}
-                  </button>
-                  <mat-divider></mat-divider>
-                </div>
-              </mat-menu>
-            </mat-card-content>
-          </mat-card>
-        </nav>
-      </mat-sidenav>
-      <mat-sidenav-content style="width: 100%;">
-        <mat-toolbar class="layout-toolbar mat-elevation-z1 fixed-toolbar">
-          <button class="menu-button" mat-icon-button (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span class="example-spacer"></span>
-          <div class="welcome-section">
-            <span class="logout-text">{{ 'Welcome ' + username }}</span>
-          </div>
-        </mat-toolbar>
-        <div class="container">
-          <router-outlet></router-outlet>
+  <mat-spinner class="centered-spinner"></mat-spinner>
+</div>
+<div class="flex-fill">
+  <mat-sidenav-container class="flex-fill">
+    <mat-sidenav
+      #sidenav
+      [mode]="isMobile ? 'over' : 'side'"
+      [opened]="!isMobile"
+      [disableClose]="!isMobile"
+      [ngClass]="{'has-border': !isMobile}"
+      class="layout-sidenav"
+    >
+      <mat-toolbar class="layout-toolbar mat-elevation-z1">
+        <div class="flex-row center-align gap-1-5rem" *ngIf="!isCompanyAdmin && !isClientAdmin">
+          <img
+            src="../assets/logo.png"
+            width="60px"
+            height="40px"
+            style="cursor: pointer"
+            (click)="routeToDashboard()"
+          />
         </div>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
+        <div class="flex-row center-align gap-1-5rem" *ngIf="isCompanyAdmin || isClientAdmin">
+          <button class="logoButton" mat-raised-button *ngIf="!companyLogo" (click)="openDialogForUploadImage()">
+            Logo
+          </button>
+          <img
+            [src]="companyLogo"
+            *ngIf="companyLogo"
+            (click)="openDialogForUploadImage()"
+            width="60px"
+            height="40px"
+            style="cursor: pointer"
+          />
+        </div>
+      </mat-toolbar>
+      <nav>
+        <br />
+        <mat-card class="profile-card">
+          <div class="flex-row gap-10px">
+              <img [src]="profilepicbase64" class="profile-image flex-20" *ngIf="profilepicbase64" (click)="openuploadprofilepic()" />
+              <img src="projects/layout/public/assets/pp.jpg" alt="pp img" class="profile-image flex-20" *ngIf="!profilepicbase64" (click)="openuploadprofilepic()" />
+              <div class="flex-70">
+                <mat-card-title id="userName">{{ username }}</mat-card-title>
+                <mat-card-subtitle class="user-roles" *ngIf="userRole !== 'Super Admin'">{{ userRoleString }}</mat-card-subtitle>
+              </div>
+              <img src="assets/settings.svg" alt="settings" class="settings-menu flex-10" (click)="openSettings(collapsed)" />
+            </div>
+            
+          <br *ngIf="!collapsed" />
+          <mat-divider *ngIf="!collapsed"></mat-divider>
+          <mat-card-content *ngIf="!collapsed" class="profile-menu-content">
+            <!-- Default Menues -->
+            <button mat-menu-item class="profile-menu-label" routerLink="/home">
+              <mat-icon>home</mat-icon>
+              Home
+            </button>
+            <button mat-menu-item class="profile-menu-label" routerLink="/my-profile">
+              <mat-icon>perm_identity</mat-icon>
+              My Profile
+            </button>
+            <button mat-menu-item class="profile-menu-label" routerLink="/change-password">
+              <mat-icon>key</mat-icon>
+              Change Password
+            </button>
+            <button mat-menu-item class="profile-menu-label" (click)="logOut()">
+              <mat-icon>logout</mat-icon>
+              Logout
+            </button>
+            <mat-menu #myAccount="matMenu" xPosition="after" class="profile-menus">
+              <div *ngFor="let acl of aclList">
+                <button mat-menu-item [routerLink]="acl.ScreenURL">
+                  {{ (acl.ScreenName === 'Screen-role mapping' ? 'User Rights' : acl.ScreenName) | titlecase }}
+                </button>
+                <mat-divider></mat-divider>
+              </div>
+            </mat-menu>
+          </mat-card-content>
+        </mat-card>
+        <app-sidebar class="mat-sidenavbar-container"></app-sidebar>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content style="width: 100%;">
+      <mat-toolbar class="layout-toolbar mat-elevation-z1 fixed-toolbar">
+        <button class="menu-button" mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <div class="welcome-section">
+          <span class="logout-text">{{ 'Welcome ' + username }}</span>
+        </div>
+      </mat-toolbar>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

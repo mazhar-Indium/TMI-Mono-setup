@@ -121,7 +121,14 @@ export class LoginComponent implements OnInit, OnDestroy{
     } else {
       this.authService.login(this.loginForm.value).subscribe((credentials: any) => {
         console.log('credentials are',credentials)
-        this.enterFullScreen();  // Request full-screen mode after successful login
+        // this.enterFullScreen();  // Request full-screen mode after successful login
+        alert('newtab');
+        alert(location);
+        setTimeout(() => {
+          window.close();
+        }, 500);
+        this.openResultWindowAndHideCurrent();
+
         this.router.navigate(['/home']);
         this.userIdle.startWatching();
         this.userIdle.onTimerStart().subscribe(count => console.log('timer is running', count));
@@ -142,6 +149,28 @@ export class LoginComponent implements OnInit, OnDestroy{
           this.stopWatching();
         });
       });
+    }
+  }
+
+  openResultWindowAndHideCurrent() {
+    const winFeature =
+    'location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes';
+   
+    const newWindow = window.open('assets/Result.html', '', winFeature);
+    alert(newWindow)
+ 
+    if (newWindow) {
+      // Hide the current window's content after a delay
+      setTimeout(() => {
+        sessionStorage.clear();
+        document.body.innerHTML = `
+          <div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
+            <p style="font-size: 24px; color: red;">You are not authorized to use this window. Please close it and continue in the new window.</p>
+          </div>`;
+        document.title = 'Window Moved'; // Optionally change the title
+      }, 500);
+    } else {
+      console.error('New window could not be opened. Possibly blocked by a pop-up blocker.');
     }
   }
 

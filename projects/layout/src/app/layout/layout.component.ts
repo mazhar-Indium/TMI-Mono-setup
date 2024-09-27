@@ -85,14 +85,14 @@ export class LayoutComponent implements OnInit {
         })
       );
 
-      ForkJoinObservable$.subscribe(([res, res2]) => {
-        if (res2) {
-          this.profilepic = res2.img;
-          this.logoPresent = res2.isCompanyLogo;
-          this.companyLogo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' + res.img);
-          this.companyLogo = res2.companyLogo;
-        }
-      });
+      // ForkJoinObservable$.subscribe(([res, res2]) => {
+      //   if (res2) {
+      //     this.profilepic = res2.img;
+      //     this.logoPresent = res2.isCompanyLogo;
+      //     this.companyLogo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' + res.img);
+      //     this.companyLogo = res2.companyLogo;
+      //   }
+      // });
  this.aclList = this.credService.credentials?.currentCompany?.AccessControls[0].Screens;
       console.log('this.aclList: ', this.aclList);
       this.onSetTheme('light-theme');

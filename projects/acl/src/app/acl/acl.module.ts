@@ -15,7 +15,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     RouterModule.forChild([
       {
-        path: 'acl', component:AclComponent
+        path: 'acl/module-management/:moduleName/:screen-name', 
+        component:AclComponent
       }
     ])
   ],

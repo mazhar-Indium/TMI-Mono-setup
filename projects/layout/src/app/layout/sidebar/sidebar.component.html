@@ -1,0 +1,37 @@
+<mat-accordion>
+  <div *ngFor="let item of menuList">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="level1">
+          <mat-icon>{{ item?.moduleIcon }}</mat-icon>
+          &nbsp;
+          {{ item?.moduleName }}
+        </mat-panel-title>
+        <mat-icon *ngIf="item?.moduleName === 'Masters' && userType == 'Super Admin'" (click)="addMasters()">library_add</mat-icon>
+        <mat-icon *ngIf="item?.moduleName === 'Masters' && isCompanyAdmin" (click)="addSiblings()">settings</mat-icon>
+      </mat-expansion-panel-header>
+
+      <mat-accordion [togglePosition]="'before'">
+        <div *ngFor="let item2 of item?.Screens">
+          <mat-expansion-panel *ngIf="item2?.SubMenu.length != 0; else singleList2">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="level2" [ngClass]="{'active-item': isActiveItem(item2)}">
+                {{ item2?.screenName }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list class="mat-list-level2" *ngFor="let item3 of item2?.SubMenu" role="list">
+              <mat-list-item role="listitem" class="level3" [ngClass]="{'active-item': isActiveItem(item3)}" (click)="navigateToModule(item3?.screenURL, item3?.screenName, item?.moduleName); setActiveItem(item3)">
+                {{ item3?.screenName }}
+              </mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+          <ng-template #singleList2>
+            <mat-list role="list" class="mat-list-level2" (click)="navigateToModule(item2?.screenURL, item2?.screenName, item?.moduleName)">
+              <mat-list-item role="listitem" class="level2" [ngClass]="{'active-item': isActiveItem(item2)}">{{ item2?.screenName }}</mat-list-item>
+            </mat-list>
+          </ng-template>
+        </div>
+      </mat-accordion>
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>

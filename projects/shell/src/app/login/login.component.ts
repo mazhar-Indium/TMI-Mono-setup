@@ -6,7 +6,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AclService, AuthenticationService, SharedService } from '../../../../shared/src/public-api';
-
+import { UserIdleService } from 'angular-user-idle';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -31,12 +31,21 @@ export class LoginComponent implements OnInit, OnDestroy{
     private _sharedService: SharedService,
     private dialogRef: MatDialog,
     private snackBar: MatSnackBar,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private userIdle: UserIdleService
   ) {
     this.createForm();
   }
 
   ngOnInit() {
+        //Start watching for user inactivity.
+        //this.userIdle.startWatching();
+
+        // Start watching when user idle is starting.
+       // this.userIdle.onTimerStart().subscribe(count => console.log(count));
+
+        // Start watch when time is up.
+       // this.userIdle.onTimeout().subscribe(() => console.log('Time is up!'));
     // Disable right click globally
     this.renderer.listen('document', 'contextmenu', (event) => {
       event.preventDefault();
@@ -111,41 +120,42 @@ export class LoginComponent implements OnInit, OnDestroy{
       return;
     } else {
       this.authService.login(this.loginForm.value).subscribe((credentials: any) => {
+        console.log('credentials are',credentials)
         this.enterFullScreen();  // Request full-screen mode after successful login
         this.router.navigate(['/home']);
+        this.userIdle.startWatching();
+        this.userIdle.onTimerStart().subscribe(count => console.log('timer is running', count));
+        this.userIdle.onTimeout().subscribe(() => {
+          console.log('Time is up');
+          var msg = 'Session Time out ';
+          this._sharedService.toastMsg(msg, 'warning');
+          this.snackBar.open(msg, 'close', {
+            duration: 2000,
+            panelClass: ['blue-snackbar']
+          });
+          this.dialogRef.closeAll();
+          this.authService.logout().subscribe((res: any) => {
+            sessionStorage.clear();
+            localStorage.clear();
+            this.router.navigate(['/login']);
+          });
+          this.stopWatching();
+        });
       });
-      // this.userIdle.startWatching();
-
-      // this.userIdle.onTimerStart().subscribe(count => console.log('timer is running', count));
-      // this.userIdle.onTimeout().subscribe(() => {
-      //   console.log('Time is up');
-      //   var msg = 'Session Time out ';
-      //   this._sharedService.toastMsg(msg, 'warning');
-      //   this.dialogRef.closeAll();
-      //   this.authService.logout().subscribe((res: any) => {
-      //     sessionStorage.clear();
-      //     localStorage.clear();
-      //     this.router.navigate(['/login'])
-      //       .then(() => {
-      //         window.location.reload();
-      //       });
-      //   });
-      //   this.stopWatching();
-      // });
     }
   }
 
   stopWatching() {
-    // this.userIdle.stopWatching();
+    this.userIdle.stopWatching();
     console.log('we have stopped watching');
   }
 
   startWatching() {
-    // this.userIdle.startWatching();
+    this.userIdle.startWatching();
   }
 
   restart() {
-    // this.userIdle.resetTimer();
+    this.userIdle.resetTimer();
   }
 
   resetPassword() {

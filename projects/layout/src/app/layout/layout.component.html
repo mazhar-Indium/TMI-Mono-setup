@@ -40,14 +40,14 @@
           <mat-card class="profile-card">
             <div class="flex-row gap-10px">
                 <img [src]="profilepicbase64" class="profile-image flex-20" *ngIf="profilepicbase64" (click)="openuploadprofilepic()" />
-                <img src="projects/layout/public/assets/pp.jpg" alt="pp img" class="profile-image flex-20" *ngIf="!profilepicbase64" (click)="openuploadprofilepic()" />
+                <img src="assets/pp.jpg" alt="pp img" class="profile-image flex-20" *ngIf="!profilepicbase64" (click)="openuploadprofilepic()" />
                 <div class="flex-70">
                   <mat-card-title id="userName">{{ username }}</mat-card-title>
                   <mat-card-subtitle class="user-roles" *ngIf="userRole !== 'Super Admin'">{{ userRoleString }}</mat-card-subtitle>
                 </div>
                 <img src="assets/settings.svg" alt="settings" class="settings-menu flex-10" (click)="openSettings(collapsed)" />
               </div>
-              
+
             <br *ngIf="!collapsed" />
             <mat-divider *ngIf="!collapsed"></mat-divider>
             <mat-card-content *ngIf="!collapsed" class="profile-menu-content">
@@ -70,8 +70,8 @@
               </button>
               <mat-menu #myAccount="matMenu" xPosition="after" class="profile-menus">
                 <div *ngFor="let acl of aclList">
-                  <button mat-menu-item [routerLink]="acl.ScreenURL">
-                    {{ (acl.ScreenName === 'Screen-role mapping' ? 'User Rights' : acl.ScreenName) | titlecase }}
+                  <button mat-menu-item [routerLink]="acl.screenURL">
+                    {{ (acl.ScreenName === 'Screen-role mapping' ? 'User Rights' : acl.screenName) | titlecase }}
                   </button>
                   <mat-divider></mat-divider>
                 </div>
@@ -96,4 +96,3 @@
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>
-  

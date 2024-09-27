@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "node --max_old_space_size=1024 --v8-pool-size=1 ./node_modules/@angular/cli/bin/ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -22,8 +22,10 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "angular-user-idle": "^4.0.0",
     "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",
+    "t-mi-monorepo-hr": "file:",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { CoreModule, SharedModule } from '../../../shared/src/public-api';
 import { LayoutModule } from '../../../layout/src/app/layout/layout.module';
+import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AclModule } from '../../../acl/src/app/acl/acl.module';
 import { OnboardingModule } from '../../../onboarding/src/app/onboarding/onboarding.module';
@@ -17,7 +18,7 @@ import { RepAndVizModule } from '../../../rep-and-viz/src/app/rep-and-viz/rep-an
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonStructureModule } from './common-structure/common-structure.module';
-
+import { provideUserIdleConfig } from 'angular-user-idle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,12 @@ import { CommonStructureModule } from './common-structure/common-structure.modul
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    provideUserIdleConfig({ idle: 600, timeout: 300, ping: 120 })
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private http:HttpClient){
+  }
+ }

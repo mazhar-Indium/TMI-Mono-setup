@@ -71,7 +71,7 @@ export class LayoutComponent implements OnInit {
       this.selectedCompany = this.credService.credentials?.currentCompany.companyId;
       this.userType = this.credService.getUserType();
       this.userRoleList = this.credService.getUserRoleList();
-      
+
       this.getprofilepic();
       const logo$ = this.aclService.getLogo(this.companyId);
       let Profilepic$ = this.aclService.getProfilePic(this.empId);
@@ -93,7 +93,8 @@ export class LayoutComponent implements OnInit {
           this.companyLogo = res2.companyLogo;
         }
       });
-
+ this.aclList = this.credService.credentials?.currentCompany?.AccessControls[0].Screens;
+      console.log('this.aclList: ', this.aclList);
       this.onSetTheme('light-theme');
 
       if (this.userRoleList?.length > 0) {

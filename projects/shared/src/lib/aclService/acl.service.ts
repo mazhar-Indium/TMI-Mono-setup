@@ -53,6 +53,7 @@ export class AclService {
       .get(`/api/Modules/GetScreensList/${moduleName}`)
       .pipe(
         map((res: any) => {
+          console.log('respone for screen list',res);
           return res;
         })
       );
@@ -285,7 +286,7 @@ export class AclService {
   getScreenPermissionDetails(ScreenUrlString: string) {
     let permissionsList: any[] = this.credService.getPermissions();
     console.log("PERMISSIONS",JSON.stringify(permissionsList));
-    
+
     return permissionsList.find((item: any) => String(item.screenURL).includes(ScreenUrlString));
   }
   // getScreenPermissionDetails(screenUrlString: string): any | undefined {
@@ -295,7 +296,7 @@ export class AclService {
   //   );
   //   return matchingPermission;
   // }
-  
+
 
   selectAllCheckbox(screenList: any[], permissionData: any[]) {
     let doSelectAll: any = {
@@ -337,7 +338,7 @@ export class AclService {
       delete: true,
       approve: true,
     };
-   
+
     for (let action of ['create', 'read', 'update', 'delete', 'approve']) {
      module.forEach((screenList:any) => {
       screenList.forEach((screen: any) => {
@@ -506,7 +507,7 @@ export class AclService {
 
   //Send SMS
   sendSMS(countryCode: any, mobileNumber: any,body:any,companyId:any) {
-   
+
     //if (email) {
       this.sharedService.sendSMS(countryCode, mobileNumber,body,companyId).subscribe((res: any) => {
         this.sharedService.toastMsg(`SMS Sent Successfully`, 'success');
@@ -641,7 +642,7 @@ export class AclService {
       })
     );
   }
-  
+
 
   //Edit Temp User
   editTempuser(data: any,tempUserId: any) {
@@ -670,7 +671,7 @@ export class AclService {
       })
     );
   }
-  
+
   //Unable Tempuser
   enableTempUser(tempUserId: any) {
     return this.http.put(`/api/TempUsers/ChangeTempUserStatus/${tempUserId}`, {}).pipe(
@@ -698,7 +699,7 @@ export class AclService {
       }
 
         //Emp Code  get api call
-  
+
     getempCode() {
       return this.http.get(`/api/EmployeePersonalDetails?getAll=true`).pipe(
         map((res: any) => {

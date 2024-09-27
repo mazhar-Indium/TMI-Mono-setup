@@ -5,7 +5,7 @@ import { SharedService } from '../../../shared/src/lib/sharedService/shared.serv
 import { AuthenticationService } from '../../../shared/src/lib/core/authentication.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-
+import { UserIdleService } from 'angular-user-idle';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
   isRestPassword: boolean = false;
 
   constructor(
-    private router: Router, 
-    private cred: CredentialsService, 
-    // private userIdle: UserIdleService,
+    private router: Router,
+    private cred: CredentialsService,
+    private userIdle: UserIdleService,
     private _sharedService: SharedService,
     private authService: AuthenticationService,
     private dialogRef: MatDialog,
@@ -55,38 +55,43 @@ export class AppComponent implements OnInit {
     });
 
     // Uncomment if user idle watching is implemented
-    // this.userIdle.startWatching();
-    // this.userIdle.onTimerStart().subscribe(count => console.log('timer is running', count));
-    // this.userIdle.onTimeout().subscribe(() => {
-    //   console.log('Time is up');
-    //   var msg = 'Session Time out ';
-    //   this._sharedService.toastMsg(msg, 'warning');
-    //   this.snackBar.open(msg, 'close', {
-    //     duration: 2000,
-    //     panelClass: ['blue-snackbar']
-    //   });
-    //   this.dialogRef.closeAll();
-    //   this.authService.logout().subscribe((res: any) => {
-    //     sessionStorage.clear();
-    //     localStorage.clear();
-    //     this.router.navigate(['/login']);
-    //   });
-    //   this.stopWatching();
-    // });
-  }
+  //   if(this.cred.credentials){
+  //     console.log('timer');
+  //   this.userIdle.startWatching();
+  //   this.userIdle.onTimerStart().subscribe(count => console.log('timer is running', count));
+  //   this.userIdle.onTimeout().subscribe(() => {
+  //     console.log('Time is up');
+  //     var msg = 'Session Time out ';
+  //     this._sharedService.toastMsg(msg, 'warning');
+  //     this.snackBar.open(msg, 'close', {
+  //       duration: 2000,
+  //       panelClass: ['blue-snackbar']
+  //     });
+  //     this.dialogRef.closeAll();
+  //     this.authService.logout().subscribe((res: any) => {
+  //       sessionStorage.clear();
+  //       localStorage.clear();
+  //       this.router.navigate(['/login']);
+  //     });
+  //     this.stopWatching();
+  //   });
+  // }
+}
 
   ngOnChanges() { }
 
   stopWatching() {
-    // this.userIdle.stopWatching();
+    this.userIdle.stopWatching();
     console.log('we have stopped watching');
   }
 
   startWatching() {
-    // this.userIdle.startWatching();
+    this.userIdle.startWatching();
+    console.log('we have started watching');
   }
 
   restart() {
-    // this.userIdle.resetTimer();
+     this.userIdle.resetTimer();
+     console.log('we have restart watching');
   }
 }

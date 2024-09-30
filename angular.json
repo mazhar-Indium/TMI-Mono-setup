@@ -39,8 +39,7 @@
 							}
 						],
 						"styles": [
-							"projects/shell/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/shell/src/styles.scss"
 						],
 						"scripts": [],
 						"main": "projects/shell/src/main.ts",
@@ -109,8 +108,7 @@
 							}
 						],
 						"styles": [
-							"projects/shell/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/shell/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -153,8 +151,7 @@
 							}
 						],
 						"styles": [
-							"projects/layout/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/layout/src/styles.scss"
 						],
 						"scripts": [],
 						"main": "projects/layout/src/main.ts",
@@ -223,8 +220,7 @@
 							}
 						],
 						"styles": [
-							"projects/layout/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/layout/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -267,8 +263,7 @@
 							}
 						],
 						"styles": [
-							"projects/acl/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/acl/src/styles.scss"
 						],
 						"scripts": [],
 						"main": "projects/acl/src/main.ts",
@@ -337,8 +332,7 @@
 							}
 						],
 						"styles": [
-							"projects/acl/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/acl/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -381,8 +375,7 @@
 							}
 						],
 						"styles": [
-							"projects/onboarding/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/onboarding/src/styles.scss"
 						],
 						"scripts": [],
 						"main": "projects/onboarding/src/main.ts",
@@ -451,8 +444,7 @@
 							}
 						],
 						"styles": [
-							"projects/onboarding/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/onboarding/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -495,8 +487,7 @@
 							}
 						],
 						"styles": [
-							"projects/master/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/master/src/styles.scss"
 						],
 						"scripts": [],
 						"main": "projects/master/src/main.ts",
@@ -565,8 +556,7 @@
 							}
 						],
 						"styles": [
-							"projects/master/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/master/src/styles.scss"
 						],
 						"scripts": []
 					}
@@ -609,8 +599,7 @@
 							}
 						],
 						"styles": [
-							"projects/rep-and-viz/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/rep-and-viz/src/styles.scss"
 						],
 						"scripts": [],
 						"main": "projects/rep-and-viz/src/main.ts",
@@ -679,8 +668,7 @@
 							}
 						],
 						"styles": [
-							"projects/rep-and-viz/src/styles.scss",
-							"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+							"projects/rep-and-viz/src/styles.scss"
 						],
 						"scripts": []
 					}
